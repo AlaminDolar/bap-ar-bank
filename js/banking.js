@@ -8,6 +8,18 @@ document.getElementById('depositBtn').addEventListener('click',function(){
 //   add deposit ammount
  
 const displayamount = document.getElementById('depositamount');
-displayamount.innerText=depositamount;
+const previousDepositAmount = displayamount.innerText;
+const newDepsoitToatal= parseFloat(previousDepositAmount) +parseFloat(depositamount) ;
+displayamount.innerText=newDepsoitToatal;
+
+// update account blance
+const Blance = document.getElementById('blanceAmount');
+const previousBlance = Blance.innerText;
+
+// console.log(previousBlance);
+const newBlance = parseFloat(previousBlance)+parseFloat(depositamount);
+Blance.innerText= newBlance;
 
 })
+
+// handle withdraw event handler
