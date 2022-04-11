@@ -22,4 +22,43 @@ Blance.innerText= newBlance;
 
 })
 
-// handle withdraw event handler
+// handle withdraw event handler 
+document.getElementById('withdrawBtn').addEventListener('click',function(){
+  // console.log('withdraw button clicked');
+
+  // get withdraw input
+
+  const withdrawInputField = document.getElementById('withdraw-total');
+   const withdrawAmount= withdrawInputField.value;        /new blance/
+ 
+  //  clear input
+  withdrawInputField.value='';
+
+  // add total withdraw in withdraw box
+  const DisplaywithdrawTotal = document.getElementById('withdraw-blance');
+previousWithdrawAmoubt = DisplaywithdrawTotal.innerText;
+
+const newWithdawTotal = parseFloat(previousWithdrawAmoubt)+parseFloat(withdrawAmount);
+DisplaywithdrawTotal.innerText=newWithdawTotal;
+
+  // update blance By withdraw
+
+  const taotalblance = document.getElementById('blanceAmount');
+  
+  const pBlance = taotalblance.innerText;
+ 
+
+  newWblance = parseFloat(pBlance) - parseFloat(withdrawAmount);
+  taotalblance.innerText=newWblance;
+
+
+
+
+
+
+  
+
+
+
+
+})
